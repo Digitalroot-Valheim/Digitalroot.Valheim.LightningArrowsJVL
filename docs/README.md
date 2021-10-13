@@ -2,8 +2,7 @@
 This is a replacement for <a href="https://www.nexusmods.com/valheim/mods/609">Bone Arrows</a> by v801
 
 ## License
-Original source has no license.   
-JVL Version is released under: <a href="https://github.com/Digitalroot-Valheim/Digitalroot.Valheim.BoneArrowsJVL/blob/main/LICENSE">**GNU Affero General Public License v3.0**</a>
+<a href="https://github.com/Digitalroot-Valheim/Digitalroot.Valheim.BoneArrowsJVL/blob/main/LICENSE">**GNU Affero General Public License v3.0**</a>
 
 ## Bone Arrows JVL
 Adds bone arrows into the game.
