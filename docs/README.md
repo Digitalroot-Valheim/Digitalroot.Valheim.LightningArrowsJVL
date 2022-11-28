@@ -1,4 +1,4 @@
-﻿## Summary
+## Summary
 This is a replacement for <a href="https://www.nexusmods.com/valheim/mods/609">Bone Arrows</a> by v801
 
 ## License

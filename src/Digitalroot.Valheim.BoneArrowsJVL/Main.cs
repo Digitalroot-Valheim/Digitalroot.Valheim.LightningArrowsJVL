@@ -6,6 +6,7 @@ using Jotunn.Entities;
 using Jotunn.Managers;
 using Jotunn.Utils;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 
 namespace Digitalroot.Valheim.BoneArrowsJVL
@@ -14,24 +15,21 @@ namespace Digitalroot.Valheim.BoneArrowsJVL
   [NetworkCompatibility(CompatibilityLevel.ClientMustHaveMod, VersionStrictness.Minor)]
   [BepInIncompatibility("com.bepinex.plugins.bonearrows")]
   [BepInDependency(Jotunn.Main.ModGuid)]
-  public class Main : BaseUnityPlugin, ITraceableLogging
+  [SuppressMessage("ReSharper", "MemberCanBePrivate.Global")]
+  public partial class Main : BaseUnityPlugin, ITraceableLogging
   {
-    public const string Version = "1.0.0";
-    public const string Name = "Digitalroot BoneArrowsJVL";
-    public const string Guid = "digitalroot.mods.bonearrows.jvl";
-    public const string Namespace = "Digitalroot.Valheim" + nameof(BoneArrowsJVL);
     public static Main Instance;
 
     public Main()
     {
       Instance = this;
-#if DEBUG
+      #if DEBUG
       EnableTrace = true;
       Log.RegisterSource(Instance);
-#else
+      #else
       EnableTrace = false;
-#endif
-      Log.Trace(Main.Instance, $"{Main.Namespace}.{MethodBase.GetCurrentMethod().DeclaringType?.Name}.{MethodBase.GetCurrentMethod().Name}");
+      #endif
+      Log.Trace(Main.Instance, $"{Main.Namespace}.{MethodBase.GetCurrentMethod()?.DeclaringType?.Name}.{MethodBase.GetCurrentMethod()?.Name}");
     }
 
     [UsedImplicitly]
@@ -39,7 +37,7 @@ namespace Digitalroot.Valheim.BoneArrowsJVL
     {
       try
       {
-        Log.Trace(Main.Instance, $"{Main.Namespace}.{MethodBase.GetCurrentMethod().DeclaringType?.Name}.{MethodBase.GetCurrentMethod().Name}");
+        Log.Trace(Main.Instance, $"{Main.Namespace}.{MethodBase.GetCurrentMethod()?.DeclaringType?.Name}.{MethodBase.GetCurrentMethod()?.Name}");
         PrefabManager.OnVanillaPrefabsAvailable += AddClonedItems;
       }
       catch (Exception e)
@@ -60,34 +58,34 @@ namespace Digitalroot.Valheim.BoneArrowsJVL
     {
       try
       {
-        Log.Trace(Main.Instance, $"{Main.Namespace}.{MethodBase.GetCurrentMethod().DeclaringType?.Name}.{MethodBase.GetCurrentMethod().Name}");
+        Log.Trace(Main.Instance, $"{Main.Namespace}.{MethodBase.GetCurrentMethod()?.DeclaringType?.Name}.{MethodBase.GetCurrentMethod()?.Name}");
 
         var customItem = new CustomItem("ArrowBoneJVL"
-          , Common.Names.Vanilla.ItemDropNames.ArrowFlint
-          , new ItemConfig
-          {
-            CraftingStation = Common.Names.Vanilla.CraftingStationNames.Workbench
-            , MinStationLevel = 1
-            , Amount = 20
-            , Requirements = new[]
-            {
-              new RequirementConfig
-              {
-                Item = Common.Names.Vanilla.ItemDropNames.Wood
-                , Amount = 8
-              }
-              , new RequirementConfig
-              {
-                Item = Common.Names.Vanilla.ItemDropNames.Feathers
-                , Amount = 2
-              }
-              , new RequirementConfig
-              {
-                Item = Common.Names.Vanilla.ItemDropNames.BoneFragments
-                , Amount = 5
-              }
-            }
-          });
+                                        , Common.Names.Vanilla.ItemDropNames.ArrowFlint
+                                        , new ItemConfig
+                                        {
+                                          CraftingStation = Common.Names.Vanilla.CraftingStationNames.Workbench
+                                          , MinStationLevel = 1
+                                          , Amount = 20
+                                          , Requirements = new[]
+                                          {
+                                            new RequirementConfig
+                                            {
+                                              Item = Common.Names.Vanilla.ItemDropNames.Wood
+                                              , Amount = 8
+                                            }
+                                            , new RequirementConfig
+                                            {
+                                              Item = Common.Names.Vanilla.ItemDropNames.Feathers
+                                              , Amount = 2
+                                            }
+                                            , new RequirementConfig
+                                            {
+                                              Item = Common.Names.Vanilla.ItemDropNames.BoneFragments
+                                              , Amount = 5
+                                            }
+                                          }
+                                        });
 
         var prefab = customItem.ItemPrefab;
 

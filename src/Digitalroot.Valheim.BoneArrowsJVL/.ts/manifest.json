@@ -5,8 +5,8 @@
   "description": "This is a replacement for Bone Arrows by v801",
   "version_number": "%VERSION_NUMBER%",
   "dependencies": [
-    "denikson-BepInExPack_Valheim-5.4.1600",
-    "ValheimModding-Jotunn-2.3.7"
+    "denikson-BepInExPack_Valheim-5.4.1901",
+    "ValheimModding-Jotunn-2.9.0"
   ],
   "website_url": "https://github.com/Digitalroot-Valheim/Digitalroot.Valheim.BoneArrowsJVL"
 }

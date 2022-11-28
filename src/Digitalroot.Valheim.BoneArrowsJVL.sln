@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31515.178
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E5C5D2B9-639B-48CF-B5B0-E44FD7F24B1E}"
 	ProjectSection(SolutionItems) = preProject
@@ -10,33 +10,29 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{E64D67E6-C2B6-471C-990D-2E9A91427B64}"
-	ProjectSection(SolutionItems) = preProject
-		..\.github\release-drafter.yml = ..\.github\release-drafter.yml
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{1960DCD1-3C51-48FF-BFF8-5FE4C3CBABB2}"
-	ProjectSection(SolutionItems) = preProject
-		..\.github\workflows\drafter.yml = ..\.github\workflows\drafter.yml
-		..\.github\workflows\publish.yml = ..\.github\workflows\publish.yml
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{B7339C8D-D995-4405-A370-0E028AB2E249}"
 	ProjectSection(SolutionItems) = preProject
 		..\docs\README.md = ..\docs\README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digitalroot.Valheim.BoneArrowsJVL", "Digitalroot.Valheim.BoneArrowsJVL\Digitalroot.Valheim.BoneArrowsJVL.csproj", "{6810B607-001B-4BA3-8AB7-7682F773FED1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digitalroot.Valheim.BoneArrowsJVL", "Digitalroot.Valheim.BoneArrowsJVL\Digitalroot.Valheim.BoneArrowsJVL.csproj", "{C583C26E-2027-49C8-A969-E15F26113539}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		DebugNoDeploy|Any CPU = DebugNoDeploy|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6810B607-001B-4BA3-8AB7-7682F773FED1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6810B607-001B-4BA3-8AB7-7682F773FED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6810B607-001B-4BA3-8AB7-7682F773FED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6810B607-001B-4BA3-8AB7-7682F773FED1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C583C26E-2027-49C8-A969-E15F26113539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C583C26E-2027-49C8-A969-E15F26113539}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C583C26E-2027-49C8-A969-E15F26113539}.DebugNoDeploy|Any CPU.ActiveCfg = DebugNoDeploy|Any CPU
+		{C583C26E-2027-49C8-A969-E15F26113539}.DebugNoDeploy|Any CPU.Build.0 = DebugNoDeploy|Any CPU
+		{C583C26E-2027-49C8-A969-E15F26113539}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C583C26E-2027-49C8-A969-E15F26113539}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
