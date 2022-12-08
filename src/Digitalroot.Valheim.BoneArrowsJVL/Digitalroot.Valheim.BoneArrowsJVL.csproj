@@ -27,7 +27,7 @@
       https://nuget.bepinex.dev/v3/index.json;
       https://digitalroot-valheim-nuget.s3.us-west-2.amazonaws.com/index.json
     </RestoreAdditionalProjectSources>
-    <VersionPrefix>1.0.1</VersionPrefix>
+    <VersionPrefix>0.0.1</VersionPrefix>
     <Configurations>Debug;Release;DebugNoDeploy</Configurations>
   </PropertyGroup>
 
@@ -64,20 +64,22 @@
 
   <ItemGroup>
     <PackageReference Include="BepInEx.Core" Version="[5.4.19]" />
-    <PackageReference Include="Digitalroot.Valheim.Build.Targets" Version="1.0.11" />
-    <PackageReference Include="Digitalroot.Valheim.Common.AssemblyInfo" Version="1.0.10">
+    <PackageReference Include="Digitalroot.Valheim.Build.Targets" Version="1.0.21" />
+    <PackageReference Include="Digitalroot.Valheim.Common.AssemblyInfo" Version="1.0.12">
       <PrivateAssets>all</PrivateAssets>
       <ExcludeAssets>runtime</ExcludeAssets>
+      <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Digitalroot.Valheim.Common.Log" Version="1.1.31" />
-    <PackageReference Include="Digitalroot.Valheim.Common.Names" Version="1.4.11">
+    <PackageReference Include="Digitalroot.Valheim.Common.Log" Version="1.1.34" />
+    <PackageReference Include="Digitalroot.Valheim.Common.Names" Version="1.4.13">
       <IncludeAssets></IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Digitalroot.Valheim.Common.References" Version="0.212.11">
+    <PackageReference Include="Digitalroot.Valheim.Common.References" Version="0.212.14">
       <PrivateAssets>all</PrivateAssets>
       <ExcludeAssets>runtime</ExcludeAssets>
+      <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Digitalroot.Valheim.Common.Utils" Version="1.0.21" />
+    <PackageReference Include="Digitalroot.Valheim.Common.Utils" Version="1.0.26" />
     <PackageReference Include="ErrorProne.NET.CoreAnalyzers" Version="0.1.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

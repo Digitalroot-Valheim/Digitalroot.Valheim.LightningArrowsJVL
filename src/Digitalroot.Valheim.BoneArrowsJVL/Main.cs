@@ -1,5 +1,7 @@
 ﻿using BepInEx;
+using BepInEx.Configuration;
 using Digitalroot.Valheim.Common;
+using Digitalroot.Valheim.Common.Names.Vanilla;
 using JetBrains.Annotations;
 using Jotunn.Configs;
 using Jotunn.Entities;
@@ -14,11 +16,12 @@ namespace Digitalroot.Valheim.BoneArrowsJVL
   [BepInPlugin(Guid, Name, Version)]
   [NetworkCompatibility(CompatibilityLevel.ClientMustHaveMod, VersionStrictness.Minor)]
   [BepInIncompatibility("com.bepinex.plugins.bonearrows")]
-  [BepInDependency(Jotunn.Main.ModGuid)]
+  [BepInDependency(Jotunn.Main.ModGuid, "2.10.0")]
   [SuppressMessage("ReSharper", "MemberCanBePrivate.Global")]
   public partial class Main : BaseUnityPlugin, ITraceableLogging
   {
     public static Main Instance;
+    [UsedImplicitly] public static ConfigEntry<int> NexusId;
 
     public Main()
     {
@@ -29,7 +32,9 @@ namespace Digitalroot.Valheim.BoneArrowsJVL
       #else
       EnableTrace = false;
       #endif
-      Log.Trace(Main.Instance, $"{Main.Namespace}.{MethodBase.GetCurrentMethod()?.DeclaringType?.Name}.{MethodBase.GetCurrentMethod()?.Name}");
+      NexusId = Config.Bind("General", "NexusID", 1569, new ConfigDescription("Nexus mod ID for updates", null, new ConfigurationManagerAttributes { Browsable = false, ReadOnly = true }));
+      Log.RegisterSource(Instance);
+      Log.Trace(Instance, $"{Namespace}.{MethodBase.GetCurrentMethod()?.DeclaringType?.Name}.{MethodBase.GetCurrentMethod()?.Name}");
     }
 
     [UsedImplicitly]
@@ -37,7 +42,7 @@ namespace Digitalroot.Valheim.BoneArrowsJVL
     {
       try
       {
-        Log.Trace(Main.Instance, $"{Main.Namespace}.{MethodBase.GetCurrentMethod()?.DeclaringType?.Name}.{MethodBase.GetCurrentMethod()?.Name}");
+        Log.Trace(Instance, $"{Namespace}.{MethodBase.GetCurrentMethod()?.DeclaringType?.Name}.{MethodBase.GetCurrentMethod()?.Name}");
         PrefabManager.OnVanillaPrefabsAvailable += AddClonedItems;
       }
       catch (Exception e)
@@ -58,30 +63,30 @@ namespace Digitalroot.Valheim.BoneArrowsJVL
     {
       try
       {
-        Log.Trace(Main.Instance, $"{Main.Namespace}.{MethodBase.GetCurrentMethod()?.DeclaringType?.Name}.{MethodBase.GetCurrentMethod()?.Name}");
+        Log.Trace(Instance, $"{Namespace}.{MethodBase.GetCurrentMethod()?.DeclaringType?.Name}.{MethodBase.GetCurrentMethod()?.Name}");
 
         var customItem = new CustomItem("ArrowBoneJVL"
-                                        , Common.Names.Vanilla.ItemDropNames.ArrowFlint
+                                        , ItemDropNames.ArrowFlint
                                         , new ItemConfig
                                         {
-                                          CraftingStation = Common.Names.Vanilla.CraftingStationNames.Workbench
+                                          CraftingStation = CraftingStationNames.Workbench
                                           , MinStationLevel = 1
                                           , Amount = 20
                                           , Requirements = new[]
                                           {
                                             new RequirementConfig
                                             {
-                                              Item = Common.Names.Vanilla.ItemDropNames.Wood
+                                              Item = ItemDropNames.Wood
                                               , Amount = 8
                                             }
                                             , new RequirementConfig
                                             {
-                                              Item = Common.Names.Vanilla.ItemDropNames.Feathers
+                                              Item = ItemDropNames.Feathers
                                               , Amount = 2
                                             }
                                             , new RequirementConfig
                                             {
-                                              Item = Common.Names.Vanilla.ItemDropNames.BoneFragments
+                                              Item = ItemDropNames.BoneFragments
                                               , Amount = 5
                                             }
                                           }
