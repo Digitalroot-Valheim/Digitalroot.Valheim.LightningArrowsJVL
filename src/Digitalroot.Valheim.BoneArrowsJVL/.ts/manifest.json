@@ -1,12 +1,12 @@
 {
   "$schema": "https://raw.githubusercontent.com/Digitalroot-Valheim/Digitalroot.Valheim.Common.Interfaces/main/src/json/tsio-manifest.json",
-  "name": "BoneArrowsJVL",
+  "name": "Bone_Arrows_JVL",
   "author": "Digitalroot",
   "description": "This is a replacement for Bone Arrows by v801",
   "version_number": "%VERSION_NUMBER%",
   "dependencies": [
     "denikson-BepInExPack_Valheim-5.4.1901",
-    "ValheimModding-Jotunn-2.10.0"
+    "ValheimModding-Jotunn-2.10.1"
   ],
   "website_url": "https://github.com/Digitalroot-Valheim/Digitalroot.Valheim.BoneArrowsJVL"
 }
