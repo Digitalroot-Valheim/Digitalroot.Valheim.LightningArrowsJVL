@@ -1,10 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <AssemblyName>Digitalroot.Valheim.BoneArrowsJVL</AssemblyName>
+    <AssemblyName>Digitalroot.Valheim.LightningArrowsJVL</AssemblyName>
     <TargetFrameworks>net462</TargetFrameworks>
     <LangVersion>10</LangVersion>
-    <RootNamespace>Digitalroot.Valheim.BoneArrowsJVL</RootNamespace>
+    <RootNamespace>Digitalroot.Valheim.LightningArrowsJVL</RootNamespace>
     <IsPublishable>False</IsPublishable>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
     <DebugType>embedded</DebugType>
