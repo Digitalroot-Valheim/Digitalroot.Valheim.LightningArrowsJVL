@@ -1,4 +1,3 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
@@ -23,7 +22,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{B7339C8D-D
 		..\docs\README.md = ..\docs\README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digitalroot.Valheim.BoneArrowsJVL", "Digitalroot.Valheim.BoneArrowsJVL\Digitalroot.Valheim.BoneArrowsJVL.csproj", "{C583C26E-2027-49C8-A969-E15F26113539}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digitalroot.Valheim.LightningArrowsJVL", "Digitalroot.Valheim.LightningArrowsJVL\Digitalroot.Valheim.LightningArrowsJVL.csproj", "{C583C26E-2027-49C8-A969-E15F26113539}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{2244FEC8-82FC-439E-8C35-CFA5137D030D}"
 EndProject
