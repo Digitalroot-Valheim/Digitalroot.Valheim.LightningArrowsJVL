@@ -11,11 +11,11 @@ using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 
-namespace Digitalroot.Valheim.BoneArrowsJVL
+namespace Digitalroot.Valheim.LightningArrowsJVL
 {
   [BepInPlugin(Guid, Name, Version)]
   [NetworkCompatibility(CompatibilityLevel.ClientMustHaveMod, VersionStrictness.Minor)]
-  [BepInIncompatibility("com.bepinex.plugins.bonearrows")]
+  [BepInIncompatibility("com.bepinex.plugins.lightningarrows")]
   [BepInDependency(Jotunn.Main.ModGuid, "2.10.0")]
   [SuppressMessage("ReSharper", "MemberCanBePrivate.Global")]
   public partial class Main : BaseUnityPlugin, ITraceableLogging
@@ -32,7 +32,7 @@ namespace Digitalroot.Valheim.BoneArrowsJVL
       #else
       EnableTrace = false;
       #endif
-      NexusId = Config.Bind("General", "NexusID", 1569, new ConfigDescription("Nexus mod ID for updates", null, new ConfigurationManagerAttributes { Browsable = false, ReadOnly = true }));
+      NexusId = Config.Bind("General", "NexusID", 000, new ConfigDescription("Nexus mod ID for updates", null, new ConfigurationManagerAttributes { Browsable = false, ReadOnly = true }));
       Log.RegisterSource(Instance);
       Log.Trace(Instance, $"{Namespace}.{MethodBase.GetCurrentMethod()?.DeclaringType?.Name}.{MethodBase.GetCurrentMethod()?.Name}");
     }
@@ -53,20 +53,20 @@ namespace Digitalroot.Valheim.BoneArrowsJVL
 
     private void AddClonedItems()
     {
-      AddBoneArrow();
+      AddLightningArrow();
 
       // You want that to run only once, Jotunn has the item cached for the game session
       PrefabManager.OnVanillaPrefabsAvailable -= AddClonedItems;
     }
 
-    private void AddBoneArrow()
+    private void AddLightningArrow()
     {
       try
       {
         Log.Trace(Instance, $"{Namespace}.{MethodBase.GetCurrentMethod()?.DeclaringType?.Name}.{MethodBase.GetCurrentMethod()?.Name}");
 
-        var customItem = new CustomItem("ArrowBoneJVL"
-                                        , ItemDropNames.ArrowFlint
+        var customItem = new CustomItem("ArrowLightningJVL"
+                                        , ItemDropNames.ArrowSilver
                                         , new ItemConfig
                                         {
                                           CraftingStation = CraftingStationNames.Workbench
@@ -86,8 +86,8 @@ namespace Digitalroot.Valheim.BoneArrowsJVL
                                             }
                                             , new RequirementConfig
                                             {
-                                              Item = ItemDropNames.BoneFragments
-                                              , Amount = 5
+                                              Item = ItemDropNames.HardAntler
+                                              , Amount = 1
                                             }
                                           }
                                         });
@@ -106,13 +106,15 @@ namespace Digitalroot.Valheim.BoneArrowsJVL
           throw new NullReferenceException(nameof(itemDrop));
         }
 
-        itemDrop.m_itemData.m_shared.m_name = "$item_bone_arrow";
+        itemDrop.m_itemData.m_shared.m_name = "$item_lightning_arrow";
         itemDrop.m_itemData.m_shared.m_description = "$item_bone_arrow_description";
         itemDrop.m_itemData.m_shared.m_itemType = ItemDrop.ItemData.ItemType.Ammo;
         itemDrop.m_itemData.m_shared.m_maxStackSize = 100;
         itemDrop.m_itemData.m_shared.m_weight = 0.1f;
         itemDrop.m_itemData.m_shared.m_backstabBonus = 4f;
-        itemDrop.m_itemData.m_shared.m_damages.m_pierce = 30f;
+        itemDrop.m_itemData.m_shared.m_damages.m_pierce = 20f;
+        itemDrop.m_itemData.m_shared.m_damages.m_lightning = 40f;
+        itemDrop.m_itemData.m_shared.m_damages.m_spirit = 0f;
 
         ItemManager.Instance.AddItem(customItem);
       }
