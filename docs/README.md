@@ -1,14 +1,14 @@
 ## Summary
-This is a replacement for <a href="https://www.nexusmods.com/valheim/mods/609">Bone Arrows</a> by v801
+This is a replacement for <a href="https://www.nexusmods.com/valheim/mods/608">Lightning Arrows</a> by v801
 
 ## License
-<a href="https://github.com/Digitalroot-Valheim/Digitalroot.Valheim.BoneArrowsJVL/blob/main/LICENSE">**GNU Affero General Public License v3.0**</a>
+<a href="https://github.com/Digitalroot-Valheim/Digitalroot.Valheim.LightningArrowsJVL/blob/main/LICENSE">**GNU Affero General Public License v3.0**</a>
 
-## Bone Arrows JVL
-Adds bone arrows into the game.
+## Lightning Arrows JVL
+Adds lightning arrows into the game.
 
 New Items:
-- Bone Arrow
+- Lightning Arrow
 
 
 ### Dependencies
@@ -23,10 +23,10 @@ New Items:
 - No need to configure.
 
 Issues/Bugs
-Open an issue or bug on the <a href="https://github.com/Digitalroot-Valheim/Digitalroot.Valheim.BoneArrowsJVL/issues" target="_blank">issue board﻿﻿.</a>
+Open an issue or bug on the <a href="https://github.com/Digitalroot-Valheim/Digitalroot.Valheim.LightningArrowsJVL/issues" target="_blank">issue board.</a>
 
 Questions
-Ask a question on the <a href="https://github.com/Digitalroot-Valheim/Digitalroot.Valheim.BoneArrowsJVL/discussions" target="_blank">discussions board﻿﻿.</a>
+Ask a question on the <a href="https://github.com/Digitalroot-Valheim/Digitalroot.Valheim.LightningArrowsJVL/discussions" target="_blank">discussions board.</a>
 
 ### Support Me @ https://www.buymeacoffee.com/digitalroot
 
