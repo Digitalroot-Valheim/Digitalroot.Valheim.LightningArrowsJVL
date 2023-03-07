@@ -107,7 +107,7 @@ namespace Digitalroot.Valheim.LightningArrowsJVL
         }
 
         itemDrop.m_itemData.m_shared.m_name = "$item_lightning_arrow";
-        itemDrop.m_itemData.m_shared.m_description = "$item_bone_arrow_description";
+        itemDrop.m_itemData.m_shared.m_description = "$item_lightning_arrow_description";
         itemDrop.m_itemData.m_shared.m_itemType = ItemDrop.ItemData.ItemType.Ammo;
         itemDrop.m_itemData.m_shared.m_maxStackSize = 100;
         itemDrop.m_itemData.m_shared.m_weight = 0.1f;

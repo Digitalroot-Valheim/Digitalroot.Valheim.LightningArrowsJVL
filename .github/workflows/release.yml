@@ -27,8 +27,8 @@ jobs:
       nexus-cookie-nxid-header: ${{ secrets.NEXUS_COOKIE_HEADER_NEXUSID }}
       nexus-cookie-sid-header: ${{ secrets.NEXUS_COOKIE_HEADER_SID_DEVELOP }}
     with:
-      sln-file-name: Digitalroot.Valheim.BoneArrowsJVL
-      proj-file-name: Digitalroot.Valheim.BoneArrowsJVL
+      sln-file-name: Digitalroot.Valheim.LightningArrowsJVL
+      proj-file-name: Digitalroot.Valheim.LightningArrowsJVL
       is-nuget-package: false
       nexus-enable-upload: true
-      nexus-mod-id: 1569
+      nexus-mod-id: 2301

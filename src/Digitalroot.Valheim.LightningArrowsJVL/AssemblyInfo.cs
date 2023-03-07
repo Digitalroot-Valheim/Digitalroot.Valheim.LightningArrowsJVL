@@ -1,5 +1,5 @@
-﻿using Digitalroot.Valheim.BoneArrowsJVL;
-using Digitalroot.Valheim.Common;
+﻿using Digitalroot.Valheim.Common;
+using Digitalroot.Valheim.LightningArrowsJVL;
 using System.Reflection;
 using System.Runtime.InteropServices;
 
