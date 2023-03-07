@@ -16,7 +16,7 @@ namespace Digitalroot.Valheim.LightningArrowsJVL
   [BepInPlugin(Guid, Name, Version)]
   [NetworkCompatibility(CompatibilityLevel.ClientMustHaveMod, VersionStrictness.Minor)]
   [BepInIncompatibility("com.bepinex.plugins.lightningarrows")]
-  [BepInDependency(Jotunn.Main.ModGuid, "2.10.0")]
+  [BepInDependency(Jotunn.Main.ModGuid, "2.10.4")]
   [SuppressMessage("ReSharper", "MemberCanBePrivate.Global")]
   public partial class Main : BaseUnityPlugin, ITraceableLogging
   {
