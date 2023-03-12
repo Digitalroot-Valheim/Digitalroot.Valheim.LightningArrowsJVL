@@ -50,9 +50,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Lightning_arrow.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include=".nx\description.bbcode.txt" />
     <Content Include=".ts\icon.png" />
     <Content Include=".ts\manifest.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Lightning_arrow.png" />
   </ItemGroup>
 
   <ItemGroup>

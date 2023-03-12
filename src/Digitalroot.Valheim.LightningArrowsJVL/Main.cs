@@ -9,7 +9,9 @@ using Jotunn.Managers;
 using Jotunn.Utils;
 using System;
 using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 using System.Reflection;
+using UnityEngine;
 
 namespace Digitalroot.Valheim.LightningArrowsJVL
 {
@@ -115,6 +117,7 @@ namespace Digitalroot.Valheim.LightningArrowsJVL
         itemDrop.m_itemData.m_shared.m_damages.m_pierce = 20f;
         itemDrop.m_itemData.m_shared.m_damages.m_lightning = 40f;
         itemDrop.m_itemData.m_shared.m_damages.m_spirit = 0f;
+        itemDrop.m_itemData.m_shared.m_icons[0] = LoadResourceIcon("Lightning_arrow");
 
         ItemManager.Instance.AddItem(customItem);
       }
@@ -122,6 +125,48 @@ namespace Digitalroot.Valheim.LightningArrowsJVL
       {
         Log.Error(Instance, e);
       }
+    }
+
+    private static Sprite LoadResourceIcon(string name)
+    {
+      Log.Trace(Instance, $"{Namespace}.{MethodBase.GetCurrentMethod()?.DeclaringType?.Name}.{MethodBase.GetCurrentMethod()?.Name}");
+      return LoadSpriteFromTexture(LoadTextureRaw(GetResource(Assembly.GetCallingAssembly(), $"Digitalroot.Valheim.LightningArrowsJVL.Assets.{name}.png")));
+    }
+
+    private static Texture2D LoadTextureRaw(byte[] file)
+    {
+      if (file.Any())
+      {
+        Texture2D texture2D = new Texture2D(2, 2);
+        bool flag2 = texture2D.LoadImage(file);
+        if (flag2)
+        {
+          return texture2D;
+        }
+      }
+
+      return null;
+    }
+
+    private static Sprite LoadSpriteFromTexture(Texture2D spriteTexture, float pixelsPerUnit = 100f)
+    {
+      return spriteTexture ? Sprite.Create(spriteTexture, new Rect(0f, 0f, spriteTexture.width, spriteTexture.height), new Vector2(0f, 0f), pixelsPerUnit) : null;
+    }
+
+    private static byte[] GetResource(Assembly asm, string resourceName)
+    {
+      Log.Trace(Instance, $"{Namespace}.{MethodBase.GetCurrentMethod()?.DeclaringType?.Name}.{MethodBase.GetCurrentMethod()?.Name}");
+      var manifestResourceStream = asm.GetManifestResourceStream(resourceName);
+      Log.Trace(Instance, $"[{MethodBase.GetCurrentMethod()?.DeclaringType?.Name}.{MethodBase.GetCurrentMethod()?.Name}] manifestResourceStream == null : {manifestResourceStream == null}");
+      if (manifestResourceStream == null)
+      {
+        throw new Exception($"Unable to load the manifestResourceStream from {asm.FullName} for {resourceName}");
+      }
+      Log.Trace(Instance, $"[{MethodBase.GetCurrentMethod()?.DeclaringType?.Name}.{MethodBase.GetCurrentMethod()?.Name}] manifestResourceStream.Length : {manifestResourceStream.Length}");
+      var array = new byte[manifestResourceStream.Length];
+      var _ = manifestResourceStream.Read(array, 0, (int) manifestResourceStream.Length);
+      Log.Trace(Instance, $"[{MethodBase.GetCurrentMethod()?.DeclaringType?.Name}.{MethodBase.GetCurrentMethod()?.Name}] array.Length : {array.Length}");
+      return array;
     }
 
     #region Implementation of ITraceableLogging
