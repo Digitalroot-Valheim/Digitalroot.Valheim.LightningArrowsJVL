@@ -71,7 +71,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="BepInEx.Core" Version="[5.4.19]" />
+    <PackageReference Include="BepInEx.Core" Version="[5.4.21]" />
     <PackageReference Include="Digitalroot.Valheim.Build.Targets" Version="1.0.21" />
     <PackageReference Include="Digitalroot.Valheim.Common.AssemblyInfo" Version="1.0.12">
       <PrivateAssets>all</PrivateAssets>
