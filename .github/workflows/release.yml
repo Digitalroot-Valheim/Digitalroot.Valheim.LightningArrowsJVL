@@ -26,9 +26,15 @@ jobs:
       nexus-api-key: ${{ secrets.NEXUS_API_KEY }}
       nexus-cookie-nxid-header: ${{ secrets.NEXUS_COOKIE_HEADER_NEXUSID }}
       nexus-cookie-sid-header: ${{ secrets.NEXUS_COOKIE_HEADER_SID_DEVELOP }}
+      ts-api-key: ${{ secrets.TS_SERVICEACCOUNT }}      
     with:
       sln-file-name: Digitalroot.Valheim.BoneArrowsJVL
       proj-file-name: Digitalroot.Valheim.BoneArrowsJVL
       is-nuget-package: false
       nexus-enable-upload: true
       nexus-mod-id: 1569
+      ts-enable-upload: true
+      ts-name: Bone_Arrows_JVL
+      ts-description: "This is a replacement for Bone Arrows by v801"
+      ts-categories: "client-side server-side gear" #https://thunderstore.io/api/experimental/community/valheim/category/
+      ts-dependencies: denikson-BepInExPack_Valheim@5.4.2105 ValheimModding-Jotunn@2.12.1
