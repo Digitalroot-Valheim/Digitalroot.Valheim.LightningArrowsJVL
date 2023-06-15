@@ -26,7 +26,7 @@ jobs:
       nexus-api-key: ${{ secrets.NEXUS_API_KEY }}
       nexus-cookie-nxid-header: ${{ secrets.NEXUS_COOKIE_HEADER_NEXUSID }}
       nexus-cookie-sid-header: ${{ secrets.NEXUS_COOKIE_HEADER_SID_DEVELOP }}
-      s-api-key: ${{ secrets.TS_SERVICEACCOUNT }}
+      ts-api-key: ${{ secrets.TS_SERVICEACCOUNT }}
     with:
       sln-file-name: Digitalroot.Valheim.LightningArrowsJVL
       proj-file-name: Digitalroot.Valheim.LightningArrowsJVL
