@@ -18,7 +18,7 @@ namespace Digitalroot.Valheim.LightningArrowsJVL
   [BepInPlugin(Guid, Name, Version)]
   [NetworkCompatibility(CompatibilityLevel.ClientMustHaveMod, VersionStrictness.Minor)]
   [BepInIncompatibility("com.bepinex.plugins.lightningarrows")]
-  [BepInDependency(Jotunn.Main.ModGuid, "2.10.4")]
+  [BepInDependency(Jotunn.Main.ModGuid)]
   [SuppressMessage("ReSharper", "MemberCanBePrivate.Global")]
   public partial class Main : BaseUnityPlugin, ITraceableLogging
   {
@@ -34,7 +34,7 @@ namespace Digitalroot.Valheim.LightningArrowsJVL
       #else
       EnableTrace = false;
       #endif
-      NexusId = Config.Bind("General", "NexusID", 000, new ConfigDescription("Nexus mod ID for updates", null, new ConfigurationManagerAttributes { Browsable = false, ReadOnly = true }));
+      NexusId = Config.Bind("General", "NexusID", 2301, new ConfigDescription("Nexus mod ID for updates", null, new ConfigurationManagerAttributes { Browsable = false, ReadOnly = true }));
       Log.RegisterSource(Instance);
       Log.Trace(Instance, $"{Namespace}.{MethodBase.GetCurrentMethod()?.DeclaringType?.Name}.{MethodBase.GetCurrentMethod()?.Name}");
     }
