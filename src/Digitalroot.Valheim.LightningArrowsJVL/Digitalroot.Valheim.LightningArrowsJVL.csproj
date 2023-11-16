@@ -18,8 +18,8 @@
     <RepositoryType>git</RepositoryType>
     <Authors>Digitalroot</Authors>
     <Company>Digitalroot Technologies</Company>
-    <Product>Digitalroot Valheim Plugin Template</Product>
-    <Description>Plugin Template for Valheim</Description>
+    <Product>Digitalroot Valheim LightningArrowsJVL</Product>
+    <Description>LightningArrowsJVL for Valheim</Description>
     <NeutralLanguage>en-US</NeutralLanguage>
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
