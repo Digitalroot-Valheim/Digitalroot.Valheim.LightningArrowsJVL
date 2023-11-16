@@ -24,25 +24,20 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{B7339C8D-D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digitalroot.Valheim.LightningArrowsJVL", "Digitalroot.Valheim.LightningArrowsJVL\Digitalroot.Valheim.LightningArrowsJVL.csproj", "{C583C26E-2027-49C8-A969-E15F26113539}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{2244FEC8-82FC-439E-8C35-CFA5137D030D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{2244FEC8-82FC-439E-8C35-CFA5137D030D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
-		DebugNoDeploy|Any CPU = DebugNoDeploy|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C583C26E-2027-49C8-A969-E15F26113539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C583C26E-2027-49C8-A969-E15F26113539}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C583C26E-2027-49C8-A969-E15F26113539}.DebugNoDeploy|Any CPU.ActiveCfg = DebugNoDeploy|Any CPU
-		{C583C26E-2027-49C8-A969-E15F26113539}.DebugNoDeploy|Any CPU.Build.0 = DebugNoDeploy|Any CPU
 		{C583C26E-2027-49C8-A969-E15F26113539}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C583C26E-2027-49C8-A969-E15F26113539}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2244FEC8-82FC-439E-8C35-CFA5137D030D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2244FEC8-82FC-439E-8C35-CFA5137D030D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2244FEC8-82FC-439E-8C35-CFA5137D030D}.DebugNoDeploy|Any CPU.ActiveCfg = Debug|Any CPU
-		{2244FEC8-82FC-439E-8C35-CFA5137D030D}.DebugNoDeploy|Any CPU.Build.0 = Debug|Any CPU
 		{2244FEC8-82FC-439E-8C35-CFA5137D030D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2244FEC8-82FC-439E-8C35-CFA5137D030D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
