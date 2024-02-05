@@ -44,9 +44,9 @@
       },
       "Digitalroot.Valheim.Common.References": {
         "type": "Direct",
-        "requested": "[0.217.30, )",
-        "resolved": "0.217.30",
-        "contentHash": "B1HHmPAlCire+YKJKYRiHpYRQHUyAiTrQtTujhua1AxQgMS6RCUlJ1kr3XNks3976gduuOsWJ2ydd6MHqLxRvA=="
+        "requested": "[0.217.38, )",
+        "resolved": "0.217.38",
+        "contentHash": "y8KIE7aSMeFytv1ks7CJIoDLWUPN4vzaSkWN2r4kDhkoq65rmmxB1UsjI+VZvfs9LZ5COfZwdQlz628/2Nclgg=="
       },
       "Digitalroot.Valheim.Common.Utils": {
         "type": "Direct",
@@ -59,9 +59,9 @@
       },
       "Digitalroot.Valheim.References.JvL": {
         "type": "Direct",
-        "requested": "[2.14.6, )",
-        "resolved": "2.14.6",
-        "contentHash": "lYXe5Qb3MAuRHfyCeFYucawQ99EdXd08wB5ls2CDi6blHjapWkzKH/UhV1LLtJKR/eq40bU1uoR72adZ/veoCg=="
+        "requested": "[2.15.2, )",
+        "resolved": "2.15.2",
+        "contentHash": "+GcLrGLT7mqaniFbBthYMNgRClTbDP0VSEBN+Leo56rDm4YFHbZVUanXOzJK+dWIEtttIeDINKtAJt4iljjdiw=="
       },
       "ErrorProne.NET.CoreAnalyzers": {
         "type": "Direct",
@@ -84,6 +84,15 @@
           "Fody": "6.3.0"
         }
       },
+      "Microsoft.NETFramework.ReferenceAssemblies": {
+        "type": "Direct",
+        "requested": "[1.0.3, )",
+        "resolved": "1.0.3",
+        "contentHash": "vUc9Npcs14QsyOD01tnv/m8sQUnGTGOw1BCmKcv77LBJY7OxhJ+zJF7UD/sCL3lYNFuqmQEVlkfS4Quif6FyYg==",
+        "dependencies": {
+          "Microsoft.NETFramework.ReferenceAssemblies.net48": "1.0.3"
+        }
+      },
       "BepInEx.BaseLib": {
         "type": "Transitive",
         "resolved": "5.4.20",
@@ -92,7 +101,7 @@
       "Digitalroot.References.Unity": {
         "type": "Transitive",
         "resolved": "2022.3.12",
-        "contentHash": "QgMwg+WAnbvmjxSuL+PKjr+35B0FhO0Thw9ddoSBrfBkYsMSCYAqJ0APsN2AQfXn3zVdJgP7Rw2S41DJfuBxRQ=="
+        "contentHash": "LlR803HocdHI0dTL3b1M1kRYuyCxvLh1BsqAeE3KkRIW/s2GHIdeDoWNYxav3IRInYvgHTlKmvXxovqJJeb7ew=="
       },
       "Digitalroot.Valheim.Common.Json": {
         "type": "Transitive",
@@ -116,6 +125,11 @@
         "dependencies": {
           "MonoMod.RuntimeDetour": "21.12.13.1"
         }
+      },
+      "Microsoft.NETFramework.ReferenceAssemblies.net48": {
+        "type": "Transitive",
+        "resolved": "1.0.3",
+        "contentHash": "zMk4D+9zyiEWByyQ7oPImPN/Jhpj166Ky0Nlla4eXlNL8hI/BtSJsgR8Inldd4NNpIAH3oh8yym0W2DrhXdSLQ=="
       },
       "Mono.Cecil": {
         "type": "Transitive",
