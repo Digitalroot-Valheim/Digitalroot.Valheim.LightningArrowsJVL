@@ -27,6 +27,8 @@ jobs:
       nexus-cookie-nxid-header: ${{ secrets.NEXUS_COOKIE_HEADER_NEXUSID }}
       nexus-cookie-sid-header: ${{ secrets.NEXUS_COOKIE_HEADER_SID_DEVELOP }}
       ts-api-key: ${{ secrets.TS_SERVICEACCOUNT }}
+      webhook_url: ${{ secrets.VALHEIM_DISCORD_TITANS_WEBHOOK_URL }}
+
     with:
       sln-file-name: Digitalroot.Valheim.LightningArrowsJVL
       proj-file-name: Digitalroot.Valheim.LightningArrowsJVL
@@ -37,5 +39,5 @@ jobs:
       ts-name: Lightning_Arrows_JVL
       ts-description: "This is a replacement for Lightning Arrows by v801"
       ts-categories: "client-side server-side gear" #https://thunderstore.io/api/experimental/community/valheim/category/
-      ts-dependencies: denikson-BepInExPack_Valheim@5.4.2105 ValheimModding-Jotunn@2.12.1
+      ts-dependencies: ValheimModding-Jotunn-2.19.4
       
