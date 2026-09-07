@@ -33,11 +33,13 @@ jobs:
       sln-file-name: Digitalroot.Valheim.LightningArrowsJVL
       proj-file-name: Digitalroot.Valheim.LightningArrowsJVL
       is-nuget-package: false
+      skip-unit-tests: true
       nexus-enable-upload: true
       nexus-mod-id: 2301
+      nexus-mod-file-id: 2477740
       ts-enable-upload: true
       ts-name: Lightning_Arrows_JVL
       ts-description: "This is a replacement for Lightning Arrows by v801"
       ts-categories: "client-side server-side gear" #https://thunderstore.io/api/experimental/community/valheim/category/
-      ts-dependencies: ValheimModding-Jotunn-2.19.4
+      ts-dependencies: ValheimModding-Jotunn-2.29.2
       

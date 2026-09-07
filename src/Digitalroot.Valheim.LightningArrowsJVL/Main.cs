@@ -9,7 +9,6 @@ using Jotunn.Managers;
 using Jotunn.Utils;
 using System;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
 using System.Reflection;
 using UnityEngine;
 
@@ -23,7 +22,9 @@ namespace Digitalroot.Valheim.LightningArrowsJVL
   public partial class Main : BaseUnityPlugin, ITraceableLogging
   {
     public static Main Instance;
-    [UsedImplicitly] public static ConfigEntry<int> NexusId;
+
+    [UsedImplicitly]
+    public static ConfigEntry<int> NexusId;
 
     public Main()
     {
@@ -130,22 +131,8 @@ namespace Digitalroot.Valheim.LightningArrowsJVL
     private static Sprite LoadResourceIcon(string name)
     {
       Log.Trace(Instance, $"{Namespace}.{MethodBase.GetCurrentMethod()?.DeclaringType?.Name}.{MethodBase.GetCurrentMethod()?.Name}");
-      return LoadSpriteFromTexture(LoadTextureRaw(GetResource(Assembly.GetCallingAssembly(), $"Digitalroot.Valheim.LightningArrowsJVL.Assets.{name}.png")));
-    }
-
-    private static Texture2D LoadTextureRaw(byte[] file)
-    {
-      if (file.Any())
-      {
-        Texture2D texture2D = new Texture2D(2, 2);
-        bool flag2 = texture2D.LoadImage(file);
-        if (flag2)
-        {
-          return texture2D;
-        }
-      }
-
-      return null;
+      var resource = GetResource(Assembly.GetCallingAssembly(), $"Digitalroot.Valheim.LightningArrowsJVL.Assets.{name}.png");
+      return LoadSpriteFromTexture(AssetUtils.LoadImage(resource));
     }
 
     private static Sprite LoadSpriteFromTexture(Texture2D spriteTexture, float pixelsPerUnit = 100f)
@@ -162,9 +149,10 @@ namespace Digitalroot.Valheim.LightningArrowsJVL
       {
         throw new Exception($"Unable to load the manifestResourceStream from {asm.FullName} for {resourceName}");
       }
+
       Log.Trace(Instance, $"[{MethodBase.GetCurrentMethod()?.DeclaringType?.Name}.{MethodBase.GetCurrentMethod()?.Name}] manifestResourceStream.Length : {manifestResourceStream.Length}");
       var array = new byte[manifestResourceStream.Length];
-      var _ = manifestResourceStream.Read(array, 0, (int) manifestResourceStream.Length);
+      _ = manifestResourceStream.Read(array, 0, (int)manifestResourceStream.Length);
       Log.Trace(Instance, $"[{MethodBase.GetCurrentMethod()?.DeclaringType?.Name}.{MethodBase.GetCurrentMethod()?.Name}] array.Length : {array.Length}");
       return array;
     }
